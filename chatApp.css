@@ -1,0 +1,260 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+*::-webkit-scrollbar {
+	width: 5px;
+}
+*::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+*::-webkit-scrollbar-thumb {
+	background: #aaa;
+}
+*::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+body {
+  background: -webkit-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* W3C */
+}
+
+.container {
+    margin: 5% auto;
+    max-width: 400px;
+    height: auto;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* HEADING STYLING */
+
+img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.msg-header {
+    width: 100%;
+    height: 90px;
+    background-color: #232323;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.msg-header-img {
+    border-radius: 50%;
+    width: 60px;
+    margin-left: 5%;
+    margin-top: 12px ;
+    padding-bottom: 10px;
+    float: left;
+}
+
+.header-text {
+    letter-spacing: 1px;
+    width: 120px;
+    float: left;
+    margin-top: 30px;
+}
+
+.header-text h4 {
+    width: 150px;
+    font-size: 20px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.header-text h6 {
+    font-size: 10px;
+    margin-left: 10px;
+    line-height: 2px;
+    color: #fff;
+}
+
+.header-icons {
+    width: 120px;
+    float: right;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+
+.header-icons .fa {
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+}
+
+/* STYLING THE MAIN MESSAGES BOX */
+
+#chat-page {
+    height: 480px;
+    padding: 0 0;
+    background: url(background.jpg);
+	background-attachment: fixed;
+    width: auto;
+    overflow-y: auto ;
+    border: darkslategray solid 1px;
+}
+
+ /* STYLING OF INCOMING MESSAGES */
+
+#sender-pic {
+    float: left;
+    width: 30px;
+}
+
+.received-chat-container {
+    margin: 10px 150px 20px 20px;
+}
+
+.new-received-chat {
+    margin: 10px 150px 0px 20px;
+    opacity: 0;
+    animation-name: new-received-chat;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes new-received-chat {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+#received-msg {
+    float: left;
+    padding: 0 0 0 10px;
+    vertical-align: top;
+    width: 180px;
+}
+
+.received-msg-inbox {
+    float: left;
+    padding-bottom: 5px;
+}
+
+.received-msg-text {
+    background: white;
+    border-radius: 10px;
+    color: darkslategray;
+    font-size: 14px;
+    margin: 0;
+    padding: 5px 5px 5px 12px;
+    display: inline-block;  
+}
+
+.time-received {
+    color: darkslategray;
+    font-size: 11px;
+    margin: 0 0 0 40px;
+}
+
+/* STYLING OUTGOING MESSAGES */
+
+.outgoing-chat-container {
+    overflow: hidden;
+    margin: 0px 0px 0px 150px;
+    float: right;
+    width: 60%; 
+}
+
+.outgoing-chats-msg{
+    float:left;
+    width: 180px;
+}
+
+.outgoing-chats-msg p {
+    overflow: hidden;
+    background: steelblue none repeat scroll 0 0;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 14px;
+    margin: 0;
+    padding: 5px 10px;
+    display: inline-block;
+    max-width: 250px;
+}
+
+.outgoing-text-container {
+    float: right;
+    padding: 5px;
+}
+
+.new-outgoing-chat {
+    overflow: hidden;
+    margin: 10px 0px 0px 150px;
+    opacity: 0;
+    animation-name: new-outgoing-chat;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes new-outgoing-chat {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.outgoing-chats-img {
+    float: right;
+    width: 30px;
+    margin: 0 15px 0px 5px;
+}
+
+.time-sent {
+    color: darkslategray;
+    display: block;
+    float: right;
+    font-size: 11px;
+    margin: 0 60px 10px 0;
+}
+ 
+/* STYLING THE FOOTER AND INPUT BOX */
+
+#msg-bottom {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    background-color: #232323;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#button {
+    float: right;
+    padding: 5px 5px;
+    margin-top: 16px;
+    margin-right: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: white;
+    outline: none;
+}
+
+#text-input {
+    border: none;
+    margin-top: 16px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.bottom-icons {
+    float: left;
+    margin-top: 17px;
+    width: 30%;
+    margin-left: 22px;
+}
+
+.bottom-icons .fa {
+    color: white;
+    padding: 5px;
+} 
